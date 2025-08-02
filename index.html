@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mallela Keerthi Chandrika | Portfolio</title>
+  <style>
+.connect-section {
+  padding: 60px 20px;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.connect-section h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.connect-section p {
+  font-size: 1em;
+  color: #444;
+  margin-bottom: 25px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #333;
+  max-width: 600px;
+}
+
+.contact-list li {
+  margin: 12px 0;
+}
+
+.contact-list a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+
+.hero {
+  background: linear-gradient(to bottom right, #fff5f8, #e0f2fe);
+  text-align: center;
+  padding: 120px 20px 60px;
+}
+
+
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-top: 20px;
+  font-size: 2em;
+}
+
+.tagline {
+  font-size: 1.2em;
+  color: #a855f7;
+  margin: 10px 0 15px;
+  font-weight: 500;
+}
+
+.hero-subtext {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 30px;
+}
+
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background: #4f46e5;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #3730a3;
+}
+.about-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.about-section .container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.about-section h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #111827;
+  border-bottom: 2px solid #4f46e5;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.about-section p {
+  font-size: 1.05em;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 20px;
+}
+.skills-section {
+  padding: 60px 20px;
+  background-color: #f3f4f6;
+}
+
+.skills-section .container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.skills-section h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #111827;
+  text-align: center;
+  border-bottom: 2px solid #4f46e5;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.skill-group {
+  margin-bottom: 30px;
+}
+
+.skill-group h3 {
+  color: #374151;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.skill-group ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skill-group ul li {
+  background: #e0e7ff;
+  color: #1e3a8a;
+  display: inline-block;
+  margin: 5px 10px 5px 0;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.95em;
+}
+.projects-section {
+  padding: 60px 20px;
+  background-color: #fff8fc;
+}
+
+.projects-section h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px;
+  color: #6b21a8;
+  border-bottom: 2px solid #c084fc;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background: #fdf4ff;
+  border: 1px solid #f3e8ff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInUp 0.8s forwards;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  color: #7c3aed;
+}
+
+.project-card p {
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.project-links {
+  display: flex;
+  gap: 10px;
+}
+
+.btn.small {
+  padding: 8px 16px;
+  font-size: 0.9em;
+  background-color: #e0e7ff;
+  color: #1e3a8a;
+}
+
+.btn.small.live {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+/* Animation */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.projects-scroll-wrapper {
+  overflow-x: auto;
+  padding: 40px 10px;
+  background: #fdf4ff;
+}
+
+.projects-scroll {
+  display: flex;
+  gap: 40px;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+}
+
+.project-card.fancy {
+  flex: 0 0 300px;
+  height: 200px;
+  perspective: 1000px;
+  scroll-snap-align: start;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.project-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: linear-gradient(to top left, #f0f0ff, #fff);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+  transition: box-shadow 0.3s;
+}
+
+.card-front h3 {
+  color: #6b21a8;
+  margin-bottom: 10px;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.card-back .btn {
+  background: #e0e7ff;
+  color: #1e40af;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.card-back .btn:hover {
+  background: #c7d2fe;
+}
+
+/* Scrollbar styling (optional) */
+.projects-scroll-wrapper::-webkit-scrollbar {
+  height: 10px;
+}
+.projects-scroll-wrapper::-webkit-scrollbar-thumb {
+  background: #c084fc;
+  border-radius: 5px;
+}
+.timeline-section {
+  background: #fdf4ff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.timeline-section h2 {
+  font-size: 2.5rem;
+  color: #6b21a8;
+  margin-bottom: 40px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: auto;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #c084fc;
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 20px 40px;
+  box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  left: 50%;
+  text-align: left;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: #6b21a8;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.timeline-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.timeline-content h3 {
+  margin-top: 0;
+  color: #4c1d95;
+}
+
+.timeline-content span {
+  font-size: 0.9rem;
+  color: #6b7280;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Animation on scroll */
+.timeline-content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.projects-section {
+  padding: 80px 20px;
+  background-color: #fdf8ff;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #6b21a8;
+}
+
+.section-header p {
+  color: #555;
+  font-size: 1.1em;
+}
+
+.projects-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.project-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  padding: 25px;
+  max-width: 300px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.project-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-card h3 {
+  color: #a855f7;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.project-links a {
+  display: inline-block;
+  margin: 5px 10px;
+  text-decoration: none;
+  background: #9333ea;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.project-links a:hover {
+  background: #6b21a8;
+}
+/* Hamburger Icon */
+.hamburger {
+  position: fixed;
+  top: 1.5rem;
+  right: 2rem;
+  z-index: 1001;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.hamburger span {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navigation Overlay */
+.nav-overlay {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  max-width: 300px;
+  height: 100vh;
+  background: #fefefe;
+  box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: right 0.3s ease-in-out;
+}
+.nav-overlay ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+.nav-overlay ul li {
+  margin: 20px 0;
+}
+.nav-overlay ul li a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #333;
+  transition: color 0.2s;
+}
+.nav-overlay ul li a:hover {
+  color: #ff6392; /* floral accent */
+}
+
+.nav-overlay.open {
+  right: 0;
+}
+
+/* Hamburger Animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+.card-description {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .card-description {
+  opacity: 1;
+  max-height: 100px;
+  margin-top: 10px;
+}
+.project-card {
+  width: 250px;
+  height: 200px;
+  background: lab(93.5% -10.35 -8.42);
+  color: #d31414;
+  border-radius: 12px;
+  margin: 1rem;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 0 10px lch(71.87% 45.44 328.58 / 0.2);
+  position: relative;
+}
+.project-card:hover {
+  height: 330px;
+  box-shadow: 0 0 25px rgba(72, 238, 241, 0.1);
+}
+.card-hover-wrapper {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+
+.card-header h3 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #8fff57;
+}
+
+.card-buttons {
+  opacity: 0;
+  max-height: 0;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover .card-buttons {
+  opacity: 1;
+  max-height: 100px;
+}
+
+.card-buttons a.btn {
+  background: #0c3139;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.card-buttons a.btn:hover {
+  background: #555;
+}
+.certifications {
+  background-color: #fff;
+  color: #333;
+  padding: 50px 20px;
+  animation: fadeInText 2s ease forwards;
+}
+
+.cert-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.cert-list li {
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.cert-list li::before {
+  content: "🎓";
+  position: absolute;
+  left: 0;
+}
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.certifications-section {
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+}
+
+.certifications-section h2 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.cert-card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.cert-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+}
+
+.cert-card h3 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.cert-card p {
+  color: #666;
+  font-size: 0.95em;
+  margin-bottom: 20px;
+}
+
+.cert-card .btn {
+  display: inline-block;
+  padding: 10px 18px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cert-card .btn:hover {
+  background-color: #0056b3;
+}
+
+.footer {
+  background-color: #111;
+  color: #ccc;
+  padding: 20px 15px;
+  text-align: center;
+  font-size: 0.95rem;
+  margin-top: 40px;
+}
+
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  margin-top: 8px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00bcd4;
+}
+
+
+    /* ===== CSS START ===== */
+    /* All styles from your CSS pasted here */
+    /* [CSS CODE HERE – Insert everything between <style> tags from your CSS file] */
+    [REPLACE_THIS_WITH_CSS_CONTENT]
+    /* ===== CSS END ===== */
+  </style>
+</head>
+<body>
+
+<header id="home" class="hero">
+  <div class="container">
+    <h1>Mallela Keerthi Chandrika</h1>
+    <p class="tagline">Java Developer • Team Leader • Tech Explorer</p>
+    <p class="hero-subtext">
+      Building meaningful software,<br />
+      leading with curiosity,<br />
+      and learning with purpose.
+    </p>
+    <a href="#about" class="btn">Begin My Journey ↓</a>
+  </div>
+</header>
+
+<section id="about" class="about-section">
+  <div class="container">
+    <h2>About Me</h2>
+    <p>
+      I'm Mallela Keerthi Chandrika, a passionate Java developer and team leader with a strong foundation in Core Java, OOP, and problem-solving. I thrive in collaborative environments and enjoy building software that simplifies life for others — like my recent project <strong>SmartSplit</strong>, a console-based expense management app built from scratch with my team.
+    </p>
+    <p>
+      I believe in clean logic, meaningful design, and real-world solutions. Whether it's mentoring my team, fixing edge-case bugs, or designing user-friendly interfaces, I’m always eager to learn, grow, and build.
+    </p>
+    <p>
+      Currently, I'm exploring opportunities to contribute to impactful projects and apply my skills in Java, data structures, frontend basics (HTML/CSS/JS), and communication. I’m also improving my competitive coding and working on elegant portfolio interfaces like this one.
+    </p>
+  </div>
+</section>
+
+<section id="skills" class="skills-section">
+  <div class="container">
+    <h2>Skills</h2>
+    <div class="skill-group">
+      <h3>Programming Languages</h3>
+      <ul>
+        <li>Java (Core Java, OOP, Collections)</li>
+        <li>Python (Basics)</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h3>Web Technologies</h3>
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>Responsive Design</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h3>Tools & Platforms</h3>
+      <ul>
+        <li>VS Code</li>
+        <li>Git & GitHub</li>
+        <li>GitHub Pages</li>
+        <li>Windows CLI / Terminal</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h3>Soft Skills</h3>
+      <ul>
+        <li>Team Leadership</li>
+        <li>Effective Communication</li>
+        <li>Problem Solving</li>
+        <li>Collaboration</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="projects-section">
+  <div class="container">
+    <h2>Projects</h2>
+    <p>Hover over a card to preview the idea. Click to explore more:</p>
+    <div class="projects-scroll-wrapper">
+      <div class="projects-scroll" id="projectsContainer"></div>
+    </div>
+  </div>
+</section>
+
+<section id="certifications" class="certifications-section">
+  <div class="container">
+    <h2>Certifications</h2>
+    <div class="certifications-grid">
+      <div class="cert-card">
+        <h3>Java Programming</h3>
+        <p>Issued by HackerRank</p>
+        <a href="https://www.hackerrank.com/certificates/d7521d3ec190" target="_blank" class="btn">View Certificate</a>
+      </div>
+      <div class="cert-card">
+        <h3>JavaScript (Basics)</h3>
+        <p>Issued by HackerRank</p>
+        <a href="https://www.hackerrank.com/certificates/ec53704ad5d2" target="_blank" class="btn">View Certificate</a>
+      </div>
+      <div class="cert-card">
+        <h3>Cloud Computing</h3>
+        <p>Issued by NPTEL</p>
+        <a href="https://archive.nptel.ac.in/content/noc/NOC24/SEM2/Ecertificates/106/noc24-cs118/Course/NPTEL24CS118S105580358304124420.pdf" target="_blank" class="btn">View Certificate</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Hamburger Menu -->
+<div class="hamburger" id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+<!-- Navigation Overlay -->
+<nav class="nav-overlay" id="navOverlay">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="https://drive.google.com/file/d/1KUs-OTqcNZs2A7an8rbU1J4jSDxK4ocA/view?usp=drive_link" target="_blank">Resume</a></li>
+  </ul>
+</nav>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.timeline-content').forEach(elem => observer.observe(elem));
+
+  const hamburger = document.getElementById('hamburger');
+  const navOverlay = document.getElementById('navOverlay');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navOverlay.classList.toggle('open');
+  });
+
+  document.querySelectorAll('.nav-overlay a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('active');
+      navOverlay.classList.remove('open');
+    });
+  });
+
+  const projects = [
+    {
+      title: "SmartSplit",
+      description: "A console-based smart expense splitter with group management, repayments, logs, and simplified debts. Built with Core Java.",
+      github: "https://github.com/code4Keerthi/SmartSplit",
+      
+    },
+    {
+      title: "ShopKart",
+      description: "An elegant e-commerce frontend with search, cart, login/signup, and product listings. Built with HTML, CSS, JS.",
+      github: "https://github.com/Code4Keerthi/FUTURE_FS_02",
+      
+    },
+    {
+      title: "Portfolio Website",
+      description: "A portfolio that simulates a flipping book experience with interactive scroll and hover animations.",
+      github: "https://github.com/Code4Keerthi/FUTURE_FS_01",
+      
+    },
+    {
+      title: "FlipKart Clone",
+      description: "This project is purely inspired from FlipKart and was a Clone of Flipkart.",
+      github: "https://github.com/Code4Keerthi/FUTURE_FS_03",
+      
+    }
+
+
+  ];
+
+  const container = document.getElementById("projectsContainer");
+
+  projects.forEach((project) => {
+    const card = document.createElement("div");
+    card.className = "project-card";
+    card.innerHTML = `
+      <div class="card-inner">
+        <div class="card-front">
+          <h3>${project.title}</h3>
+        </div>
+        <div class="card-back">
+          <p>${project.description}</p>
+          <div class="buttons">
+            <a href="${project.github}" target="_blank">GitHub</a>
+            <!--<a href="${project.demo}" target="_blank">Demo</a>-->
+          </div>
+        </div>
+      </div>`;
+    container.appendChild(card);
+  });
+</script>
+<section id="connect" class="connect-section">
+  <div class="container">
+    <h2>Connect</h2>
+    <p>If you'd like to collaborate, feel free to reach out via the links below.</p>
+    
+    <ul class="contact-list">
+      <li><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/mallela-keerthi-chandrika-a589842ba" target="_blank">Mallela Keerthi Chandrika</a></li>
+      <li><strong>Email:</strong> <a href="mailto:mallelakeerthichandrika@gmail.com">mallelakeerthichandrika@gmail.com</a></li>
+      <li><strong>Phone:</strong> +91-6300855029</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-container">
+    <p>&copy; 2025 Mallela Keerthi Chandrika. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="https://github.com/Code4Keerthi" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/mallela-keerthi-chandrika-a589842ba" target="_blank">LinkedIn</a>
+      <a href="mailto:mallelakeerthichandrika@gmail.com">Email</a>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
